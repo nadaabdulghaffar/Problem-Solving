@@ -56,7 +56,6 @@ int main()
     if (std::find(numbers.begin(), numbers.end(), inputNumber) != numbers.end())
     {
         std::cout << "will not take number" << std::endl;
-        std::cout << *std::find(numbers.begin(), numbers.end(), inputNumber) ;
     }
     else
     {
