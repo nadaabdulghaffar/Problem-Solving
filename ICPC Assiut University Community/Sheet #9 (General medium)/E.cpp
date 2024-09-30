@@ -31,11 +31,13 @@ char findCorrectLetter(char shiftDirection, std::string line, int currentIndex)
  */
 char findLetter(char character, char shiftDirection)
 {
-
+    // Itrate over the 3 rows
     for (int i = 0; i < 3; i++)
     {
+        // loop over each row in the keyboard 
         for (int j = 0; j < wholeKeyboard[i].length(); j++)
         {
+            // find the character of input message and pass it to the findCorrectLetter function
             if (character == wholeKeyboard[i][j])
                 return findCorrectLetter(shiftDirection, wholeKeyboard[i], j);
         }
@@ -49,9 +51,10 @@ int main()
     std::cin >> shiftDirection >> moleMessage;
 
     std::string RigthString;
-
+    // Itrate over the input Message
     for (char c : moleMessage)
     {
+        // add the correct letter to New String
         RigthString += findLetter(c, shiftDirection);
     }
     std::cout << RigthString;
