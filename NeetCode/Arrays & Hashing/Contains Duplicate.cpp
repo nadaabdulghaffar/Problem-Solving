@@ -3,6 +3,7 @@
 
 /**
  * Time Complexity O(n ^ 2)
+ * Using Brute Force approach
  */
 class Solution
 {
@@ -14,7 +15,7 @@ public:
             for (int j = i + 1; j < inputArray.size(); j++)
             {
                 if (inputArray[i] == inputArray[j])
-                    return true;
+                    return true;    
             }
         }
         return false;
