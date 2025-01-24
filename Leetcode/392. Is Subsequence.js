@@ -5,16 +5,15 @@
  * @param {string} t
  * @return {boolean}
  */
-var isSubsequence = function(s, t) {
+const isSubsequence = (s, t) => {
     if (s.length === 0) return true;
-    
-    let pointer1 = 0;
-    for(let i = 0; i < t.length; i++){
-        if(t[i] === s[pointer1]){
-            pointer1++;
-            if (pointer1 === s.length)
-                return true;
+
+    let sIndex = 0;
+    for (let tIndex = 0; tIndex < t.length; tIndex++) {
+        if (t[tIndex] === s[sIndex]) {
+            sIndex++;
+            if (sIndex === s.length) return true;
         }
     }
-	return false;
+    return false;
 };
