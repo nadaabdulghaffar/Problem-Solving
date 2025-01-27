@@ -1,5 +1,7 @@
 class Solution {
     /**
+     * Time Complexity:O(N + M log M), where N is the length of nums and M is the number of distinct elements.
+     * Space Complexity: O(M) for sorting entries 
      * @param {number[]} nums
      * @param {number} k
      * @return {number[]}
