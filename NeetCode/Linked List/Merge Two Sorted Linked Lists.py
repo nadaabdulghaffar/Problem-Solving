@@ -16,10 +16,10 @@ class Solution:
                 node.next = list2
                 list2 = list2.next
             node = node.next
+
         if list1:
             node.next = list1
         else:
             node.next = list2
-
-
+            
         return newList.next 
