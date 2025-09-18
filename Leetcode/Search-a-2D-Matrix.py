@@ -3,6 +3,7 @@ class Solution:
         leftOut, rightOut = 0 , len(matrix) - 1
 
         while leftOut <= rightOut:
+            # Find the array 
             midOut = (leftOut + rightOut) // 2
 
             if matrix[midOut][0] > target:
@@ -12,6 +13,8 @@ class Solution:
             else:
                 leftIn = 0
                 rightIn = len(matrix[midOut]) - 1 
+                
+                # search in the array we found 
                 while leftIn <= rightIn:
                     midIn = (leftIn + rightIn) // 2
                     
@@ -22,6 +25,7 @@ class Solution:
                     else:
                         return True
                 return False
+
         return False
 
    
