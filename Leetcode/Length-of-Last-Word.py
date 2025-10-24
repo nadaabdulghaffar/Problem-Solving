@@ -1,8 +1,4 @@
 class Solution:
     def lengthOfLastWord(self, s: str) -> int:
-        array = s.split(' ')
-
-        while array[-1] == '':
-            array.pop(-1)
-
+        array = s.split()
         return len(array[-1])
